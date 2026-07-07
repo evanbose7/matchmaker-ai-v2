@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background:
+    radial-gradient(800px 600px at 90% -5%, rgba(255,107,94,0.2), transparent 55%),
+    radial-gradient(600px 500px at -5% 100%, rgba(255,194,75,0.12), transparent 55%),
+    linear-gradient(180deg, #0f0a0e 0%, #1a0f17 100%);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+textarea, input {
+  background: rgba(0,0,0,0.25) !important;
+  border: 1px solid rgba(246,235,228,0.12) !important;
+  color: #f6ebe4 !important;
+  border-radius: 10px !important;
+}
+textarea:focus, input:focus {
+  outline: none !important;
+  border-color: #ff6b5e !important;
+}
+textarea::placeholder, input::placeholder {
+  color: rgba(198,163,180,0.5) !important;
+}
