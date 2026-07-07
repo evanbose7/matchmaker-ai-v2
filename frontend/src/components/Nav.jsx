@@ -17,12 +17,7 @@ export default function Nav() {
           }`}>
           Profile Audit
         </Link>
-        <Link to="/rank-photos"
-          className={`text-sm px-4 py-2 rounded-full transition-all ${
-            pathname === "/rank-photos" ? "bg-white/10 text-ink" : "text-muted hover:text-ink"
-          }`}>
-          Photo Ranker
-        </Link>
+        
       </div>
     </nav>
   );

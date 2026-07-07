@@ -24,3 +24,8 @@ textarea:focus, input:focus {
 textarea::placeholder, input::placeholder {
   color: rgba(198,163,180,0.5) !important;
 }
+@keyframes progress {
+  0% { width: 0%; }
+  80% { width: 85%; }
+  100% { width: 95%; }
+}

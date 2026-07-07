@@ -93,6 +93,19 @@ function InlinePhotoRanker({ onRanked }) {
           <span className="text-muted text-xs">{files.length} photo{files.length !== 1 ? "s" : ""} ready</span>
         )}
       </div>
+      {loading && (
+  <div className="mt-4">
+    <div className="flex justify-between text-xs text-muted mb-1">
+      <span>AI is analyzing your photos...</span>
+      <span>This takes 15-30 seconds</span>
+    </div>
+    <div className="w-full bg-white/08 rounded-full h-1.5 overflow-hidden">
+      <div className="h-full rounded-full bg-gradient-to-r from-accent to-accent2 animate-pulse"
+        style={{ width: "100%", animation: "progress 20s linear forwards" }} />
+    </div>
+  </div>
+)}
+
       {error && <p className="text-red-300 text-sm mt-3">{error}</p>}
     </div>
   );
