@@ -212,7 +212,7 @@ export default function ResultsPage() {
   const app = location.state?.app || "Dating App";
 
   const [data, setData] = useState(location.state?.preview || null);
-  const [unlocked, setUnlocked] = useState(true);
+  const [unlocked, setUnlocked] = useState(false);
   const [checkingOut, setCheckingOut] = useState(false);
   const [waitingForPayment, setWaitingForPayment] = useState(justPaid);
   const [loadingInitial, setLoadingInitial] = useState(!location.state?.preview && !justPaid);
@@ -440,7 +440,7 @@ export default function ResultsPage() {
             {unlocked ? "All red flags" : "Red flags (free preview)"}
           </div>
           <ul>
-            {(unlocked ? data.redFlags : data.redFlagsPreview || []).map((f, i) => (
+            {(unlocked ? (data.redFlags || []) : (data.redFlagsPreview || [])).map((f, i) => (
               <li key={i} className="py-2.5 text-sm border-b border-dashed border-white/10 last:border-0 flex gap-3">
                 <span className="text-red-400 flex-none">!</span>{f}
               </li>
