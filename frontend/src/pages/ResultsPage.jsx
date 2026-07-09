@@ -100,8 +100,8 @@ function InlinePhotoRanker({ onRanked }) {
       <span>This takes 15-30 seconds</span>
     </div>
     <div className="w-full bg-white/08 rounded-full h-1.5 overflow-hidden">
-      <div className="h-full rounded-full bg-gradient-to-r from-accent to-accent2 animate-pulse"
-        style={{ width: "100%", animation: "progress 20s linear forwards" }} />
+      <div className="h-full rounded-full bg-gradient-to-r from-accent to-accent2"
+        style={{ animation: "progress 20s linear forwards" }} />
     </div>
   </div>
 )}
@@ -212,7 +212,7 @@ export default function ResultsPage() {
   const app = location.state?.app || "Dating App";
 
   const [data, setData] = useState(location.state?.preview || null);
-  const [unlocked, setUnlocked] = useState(false);
+  const [unlocked, setUnlocked] = useState(true);
   const [checkingOut, setCheckingOut] = useState(false);
   const [waitingForPayment, setWaitingForPayment] = useState(justPaid);
   const [loadingInitial, setLoadingInitial] = useState(!location.state?.preview && !justPaid);
