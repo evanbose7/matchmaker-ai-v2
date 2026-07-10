@@ -172,6 +172,15 @@ router.post("/", upload.array("photos", 10), async (req, res) => {
     const text = response.content[0].text;
     const parsed = safeParseJSON(text);
 
+    parsed.photos.sort((a, b) => b.overall - a.overall);
+    parsed.photos = parsed.photos.map((photo, idx) => ({
+  ...photo,
+  rank: idx + 1,
+  }));
+
+// Recalculate topPick based on sorted order
+parsed.topPick = parsed.photos[0].photoIndex;
+
     // Attach preview URLs (base64) so frontend can show the photos
     const photosWithPreviews = parsed.photos.map((p) => ({
       ...p,
