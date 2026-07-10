@@ -275,6 +275,7 @@ export default function UploadPage() {
         <div className="mt-12 pt-6 border-t border-white/08 flex gap-6 justify-center">
           <Link to="/privacy" className="text-muted text-xs hover:text-ink transition-colors">Privacy Policy</Link>
           <Link to="/terms" className="text-muted text-xs hover:text-ink transition-colors">Terms of Service</Link>
+          <Link to="/contact" className="text-muted text-xs hover:text-ink transition-colors">Contact Us</Link>
         </div>
       </div>
     </div>
