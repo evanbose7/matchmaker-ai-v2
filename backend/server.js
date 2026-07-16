@@ -8,6 +8,7 @@ import analyzeRoutes from "./routes/analyze.js";
 import paymentsRoutes from "./routes/payments.js";
 import rankPhotosRoutes from "./routes/rankPhotos.js";
 import reportRoutes from "./routes/report.js";
+import builderRoutes from "./routes/builder.js";
 
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
@@ -30,6 +31,7 @@ app.use("/api/analyze", analyzeRoutes);
 app.use("/api/payments", paymentsRoutes);
 app.use("/api/rank-photos", rankPhotosRoutes);
 app.use("/api/report", reportRoutes);
+app.use("/api/builder", builderRoutes);
 
 app.get("/health", (req, res) => res.json({ ok: true }));
 

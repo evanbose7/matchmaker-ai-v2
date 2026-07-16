@@ -15,9 +15,14 @@ export default function Nav() {
           className={`text-sm px-4 py-2 rounded-full transition-all ${
             pathname === "/" ? "bg-white/10 text-ink" : "text-muted hover:text-ink"
           }`}>
-          Profile Audit
+          Profile Builder
         </Link>
-        
+        <Link to="/audit"
+          className={`text-sm px-4 py-2 rounded-full transition-all ${
+            pathname === "/audit" ? "bg-white/10 text-ink" : "text-muted hover:text-ink"
+          }`}>
+          Full Audit
+        </Link>
       </div>
     </nav>
   );
